@@ -72,6 +72,7 @@
 			border-bottom: 1px solid #fff;
 		}
 	</style>
+	<body>
   	<div class="counter-container">
 		<h6 class="ia"></h6>
 		<div class="btn-row">
@@ -237,3 +238,4 @@
 
 		render();
 	</script>
+	</body>
