@@ -1,4 +1,5 @@
 # https-louis-de-lavenne-de-choulot.github.io
+<html>
 <style>
 		* {
 			margin: 0;
@@ -239,3 +240,4 @@
 		render();
 	</script>
 	</body>
+		</html>
