@@ -11,12 +11,6 @@ body {
     margin: 0;
 }
 
-.item1 {
-    display: flex;
-    justify-content: center;
-    gap: 2%;
-    padding: 2%;
-}
 
 .item2 {
     background-color: #242426;
@@ -56,10 +50,38 @@ body {
     text-align: center;
 }
 
+.presentation {
+    justify-content: center;
+    gap: 2%;
+    padding: 2%;
+    display: flex;
+    max-height: 100%;
+    opacity: 1;
+    transition: padding .3s linear, max-height 1s linear, opacity .3s linear !important;
+}
+
 .pp {
     border-radius: 50%;
     width: 100px;
     height: 100px;
+}
+
+.round-button{
+    background-color: white;
+    width: max-content;
+    border: 1px black solid;
+    display: inline;
+    bottom: -12px;
+    padding: 10px;
+    border-radius: 100%;
+    position: relative;
+}
+
+.round-button::before{
+    content: "\27A3";
+    padding: 2px;
+    transform: rotate(90deg);
+    display: inline-block;
 }
 
 .item1 h1 {
@@ -192,38 +214,25 @@ body {
 
 .dropdown {
     max-height: 0 !important;
+    transition: padding 3s linear;
 }
 
-.rotate::before {
-    /* apply animated opening */
-    animation: rotate 0.5s 1;
+/* presentation and dropdown */
+.item1 .dropdown {
+    padding: 0;
+    opacity: 0;
+}
+
+.rotate::before{
     transform: rotate(-90deg);
 }
 
-/* Rotate animation */
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(-90deg);
-    }
+.directory::before, .round-button::before {
+    /* apply transition 0.5s linear */
+    transition: transform .5s linear;
 }
 
 .rotate-down::before {
     /* apply animated closing */
-    animation: rotate-down 0.5s 1;
     transform: rotate(0deg);
-}
-
-/* Rotate-down animation */
-@keyframes rotate-down {
-    0% {
-        transform: rotate(-90deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
 }
