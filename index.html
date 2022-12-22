@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="Keywords"
+        content="CV, curriculum vitae, choulot, louis, développeur, web, front, back, fullstack, algosup, 3ème année, 2022, de choulot, de lavenne, admin, server admin, administrateur, presentation, github">
+    <meta name="Description" content="CV de Louis de Lavenne de Choulot de Chabaud-la-tour, présentation complète">
+    <meta property="og:image:type" content="image/png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon_io/favicon.ico">
+    <title>CV de Choulot</title>
     <!-- CSS only -->
     <script src="https://unpkg.com/htmx.org@1.8.4"
         integrity="sha384-wg5Y/JwF7VxGk4zLsJEcAojRtlVp1FKKdGy1qN+OMtdq72WRvX/EdRdqg/LOhYeV" crossorigin="anonymous">
@@ -26,6 +31,13 @@
             right: 0;
             left: 0;
             margin: 0;
+        }
+
+        .item1 {
+            display: flex;
+            justify-content: center;
+            gap: 2%;
+            padding: 2%;
         }
 
         .item2 {
@@ -70,6 +82,11 @@
             height: 100px;
         }
 
+        .item1 h1 {
+            align-self: center;
+            font-size: 26px;
+        }
+
         /* remove ul style and indentation */
         .item2 ul {
             margin-top: 0;
@@ -96,12 +113,14 @@
             font-size: 20px;
             font-weight: bold;
             color: #cccccc;
-            margin-top: 4px;
+            margin-top: 15px;
+            margin-bottom: 5px;
         }
 
         .directory::before {
             /* down arrowhead */
             content: "\2304";
+            margin-left: 10px;
             margin-top: -4px;
             margin-right: 5px;
         }
@@ -123,6 +142,13 @@
 
         .selected {
             background-color: #34343c !important;
+        }
+
+        #drpdwn {
+            /* constant transition */
+            transition: max-height .3s linear;
+            overflow: hidden;
+            max-height: 100%;
         }
 
         .file-title {
@@ -182,6 +208,44 @@
             background-color: #1e1e1e;
             height: 100%;
         }
+
+        .dropdown {
+            max-height: 0 !important;
+        }
+
+        .rotate::before {
+            /* apply animated opening */
+            animation: rotate 0.5s 1;
+            transform: rotate(-90deg);
+        }
+
+        /* Rotate animation */
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(-90deg);
+            }
+        }
+
+        .rotate-down::before {
+            /* apply animated closing */
+            animation: rotate-down 0.5s 1;
+            transform: rotate(0deg);
+        }
+
+        /* Rotate-down animation */
+        @keyframes rotate-down {
+            0% {
+                transform: rotate(-90deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
     </style>
     <div class="container">
         <div class="item1">
@@ -191,23 +255,25 @@
             <h1>Louis de Lavenne de Choulot</h1>
         </div>
         <div class="item2">
-            <!-- list in list -->
-            <ul>
-                <h4 class="directory">My Presentation</h4>
-                <button id="home" class="selected" hx-get="whoami" hx-trigger="click" hx-target=".item4" onclick="Select(this)">
+            <h4 class="directory" onclick="DropDown(this, document.getElementById('drpdwn'))">My Presentation</h4>
+            <!-- list -->
+            <ul id="drpdwn">
+                <button id="home" class="selected" hx-get="/html-elms/whoami" hx-trigger="click" hx-target=".item4"
+                    onclick="Select(this)">
                     <li class="html">Qui suis-je ?</li>
                 </button>
                 <!-- add selected class if clicked -->
-                <button hx-get="experience" hx-trigger="click" hx-target=".item4" onclick="Select(this)">
+                <button hx-get="/html-elms/experience" hx-trigger="click" hx-target=".item4" onclick="Select(this)">
                     <li class="html">Mes expérience</li>
                 </button>
-                <button hx-get="projects" hx-trigger="click" hx-target=".item4" onclick="Select(this)">
+                <button hx-get="/html-elms/projects" hx-trigger="click" hx-target=".item4" onclick="Select(this)">
                     <li class="html">Mes projets</li>
                 </button>
             </ul>
         </div>
         <div class="item3">
-            <div class="file-title html" hx-get="whoami" hx-trigger="click" hx-target=".item4" onclick="Select(document.getElementById('home'))">Who am I ?</div>
+            <div class="file-title html" hx-get="whoami" hx-trigger="click" hx-target=".item4"
+                onclick="Select(document.getElementById('home'))">Who am I ?</div>
         </div>
         <div class="code-container">
             <div class="spe-item4">
@@ -227,7 +293,7 @@
             <div class="item4">
                 <span>
                     <p>
-                        Bonjour Je m'appelle louis de Lavenne, développeur passioné en étude à ALGOSUP en 3ème année.
+                        Bonjour Je m'appelle Louis de Choulot, développeur passioné en 3ème année d'étude à ALGOSUP.
                     </p>
                     <p><br>en 3 mots je suis : <br> Passioné<br>Dynamique<br><span
                             style="color:rgb(249, 211, 44);">Développeur</span> avant tout </p>
