@@ -126,12 +126,14 @@
         }
 
         .file-title {
+            cursor: auto;
             width: fit-content;
             display: flex;
             background-color: #34343c;
             padding-right: 10px;
             padding-left: 20px;
             align-items: center;
+            pointer-events: none;
             font-size: small;
         }
 
@@ -139,6 +141,8 @@
             /* thin cross */
             content: "\2715";
             font-size: x-small;
+            cursor: pointer;
+            pointer-events: all;
             margin-left: 5px;
         }
 
@@ -178,10 +182,6 @@
             background-color: #1e1e1e;
             height: 100%;
         }
-        .selected.htmx-added{
-            color: #242426;
-            font-size: 30px;
-        }
     </style>
     <div class="container">
         <div class="item1">
@@ -194,20 +194,20 @@
             <!-- list in list -->
             <ul>
                 <h4 class="directory">My Presentation</h4>
-                <button class="selected" hx-get="whoami" hx-trigger="click" hx-target=".item4" onclick="Select(this)">
+                <button id="home" class="selected" hx-get="whoami" hx-trigger="click" hx-target=".item4" onclick="Select(this)">
                     <li class="html">Qui suis-je ?</li>
                 </button>
                 <!-- add selected class if clicked -->
                 <button hx-get="experience" hx-trigger="click" hx-target=".item4" onclick="Select(this)">
                     <li class="html">Mes expérience</li>
                 </button>
-                <button  hx-get="projects" hx-trigger="click" hx-target=".item4" onclick="Select(this)">
+                <button hx-get="projects" hx-trigger="click" hx-target=".item4" onclick="Select(this)">
                     <li class="html">Mes projets</li>
                 </button>
             </ul>
         </div>
         <div class="item3">
-            <div class="file-title html">Who am I ?</div>
+            <div class="file-title html" hx-get="whoami" hx-trigger="click" hx-target=".item4" onclick="Select(document.getElementById('home'))">Who am I ?</div>
         </div>
         <div class="code-container">
             <div class="spe-item4">
