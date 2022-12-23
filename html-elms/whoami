@@ -1,7 +1,22 @@
 <span>
     <p>
-        Bonjour Je m'appelle Louis de Choulot, développeur passioné en 3ème année d'étude à ALGOSUP.
+        Bonjour Je m'appelle Louis de Choulot
+        <br>
+        Je suis:
+        <br>
+        manager, développeur web et admin serveur chez <span onclick="Definition('ewp')">Euro Web Partners</span>
+        <br>
+        étudiant en 3ème année d'étude à <span onclick="Definition('algosup')">ALGOSUP</span>.
+        <br>
+        <br>
+        Mes points forts sont le back-end, l'administration serveur, le développement d'application / logiciels et la gestion de projet.
+        <br>
+        Ma plus grande faiblesse technique est le design sur lequel je travaille tout les jours.
     </p>
-    <p><br>en 3 mots je suis : <br> Passioné<br>Dynamique<br><span style="color:rgb(249, 211, 44);">Développeur</span>
-        avant tout </p>
+    <p><br>en 3 mots je suis : <br> Passioné<br>Dynamique<br><span
+            style="color:rgb(249, 211, 44);">Développeur</span> avant tout </p>
+</span>
+<span class="definition">
+    <p id="ewp">Euro Web Partners est votre partenaire du quotidien dans le support de vos services informatiques, la création de votre image sur le web (site, signature éléctronique, campagnes emailing & sms), votre gardien contre les attaques digitals ainsi que le fournisseur de votre matériels informatiques et de vos logiciels. Nous prenons soins de choisir les outils les plus performant pour vos tâches et de leur fonctionnement continue.</p>
+    <p id="algosup">ALGOSUP est une école/startup française du centre de la france. On y étudie les softskills nécessaires au management en entreprise et le coding à travers le medium de projets donnés par des entreprises.</p>
 </span>

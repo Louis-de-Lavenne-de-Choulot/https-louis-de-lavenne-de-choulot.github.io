@@ -46,3 +46,26 @@ function DropDown(elm, elm2) {
     //toggle class "dropdown" on elm2
     elm2.classList.toggle("dropdown");
 }
+
+function Definition(name) {
+    //get elm with class "definition"
+    let def = document.getElementsByClassName("definition");
+    //if elm with class "definition"
+    if (def.length == 1) {
+        //remove class "show" from child of elm with class "definition"
+        for (let i = 0; i < def[0].children.length; i++) {
+            // if elm with class "definition" has child with class "show" and id name is the same as elm with class "definition" child with class "show" remove class "show" and return
+            if (def[0].children[i].classList.contains("show") && def[0].children[i].id == name) {
+                def[0].children[i].classList.remove("show");
+                return;
+            } else {
+                //remove class "show" from elm with class "definition" child
+                def[0].children[i].classList.remove("show");
+            }
+        }
+        //add class "show" to elm with id name
+        document.getElementById(name).classList.add("show");
+    }
+    // user go to anchor with id name
+    window.location.hash = name;
+}

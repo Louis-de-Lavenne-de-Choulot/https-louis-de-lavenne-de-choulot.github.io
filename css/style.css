@@ -26,6 +26,7 @@ body {
     background-color: #1e1e1e;
     color: #858585;
     width: 6%;
+    overflow: hidden;
 }
 
 .item4 {
@@ -177,8 +178,9 @@ body {
 
 .code-container {
     display: flex;
-    /* line-height: 30%; */
+    font-size: larger;
     line-height: 1.5;
+    height: inherit;
 }
 
 @media screen and (max-width: 600px) {
@@ -202,9 +204,32 @@ body {
     margin-top: 0;
 }
 
+/* .item4 > span {
+    margin-left: 10px;
+    margin-right: 10px;
+} */
+
 .item4 p {
     margin-bottom: 0;
     margin-top: 0;
+}
+
+.definition p {
+    display: none;
+}
+
+.definition p::before {
+    content: "*";
+    color: #d37435;
+    font-weight: bold;
+}
+
+.definition .show {
+    display: block;
+}
+
+.definition {
+    color: #b8adad;
 }
 
 .fill-void {
