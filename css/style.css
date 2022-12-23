@@ -26,18 +26,29 @@ body {
     background-color: #1e1e1e;
     color: #858585;
     width: 6%;
-    overflow: hidden;
+    overflow: auto;
+    overflow: -moz-scrollbars-none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
 }
+
+.spe-item4::-webkit-scrollbar {
+    width: 0;
+    
+}
+
 
 .item4 {
     background-color: #1e1e1e;
     text-align: left;
     color: #8ac5e1;
     width: 100%;
+    overflow: auto;
 }
 
 .item5 {
     background-color: #0575C3;
+    font-size: larger;
+    line-height: 1.5;
 }
 
 .container {
@@ -181,10 +192,12 @@ body {
     font-size: larger;
     line-height: 1.5;
     height: inherit;
+    overflow: auto;
+    min-height: -webkit-fill-available;
 }
 
 @media screen and (max-width: 600px) {
-    .code-container {
+    .code-container, .item5 {
         font-size: small;
     }
 }

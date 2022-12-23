@@ -1,3 +1,5 @@
+let scrollnbrs;
+
 function Select(elm) {
     //search and remove class "selected" from an elm
     var selected = document.getElementsByClassName("selected");
@@ -68,4 +70,35 @@ function Definition(name) {
     }
     // user go to anchor with id name
     window.location.hash = name;
+
+    if (document.getElementById('item4').scrollHeight > scrollnbrs.scrollHeight) {
+        resized();
+    }
+}
+
+// wait for page load
+window.onload = function () {
+
+    scrollnbrs = document.getElementById("spe-item4");
+
+    resized();
+
+    // event listener on class "item4" and on scroll event
+    document.getElementById('item4').addEventListener("scroll", function () {
+        // assign offsetTop of elm with class "item4" to elm with class "spe-item4"
+        scrollnbrs.scrollTop = this.scrollTop;
+        console.log(this.scrollTop, scrollnbrs.scrollTop);
+    });
+}
+
+function resized() {
+    let nbr = Math.floor(document.getElementById('item4').scrollHeight / document.getElementById('balancing').clientHeight);
+    console.log(nbr);
+    // for x in range 0 to nbr add 1 to elm with class "spe-item4"
+    let inc = 0;
+    scrollnbrs.innerText = "";
+    while (inc < nbr) {
+        inc++;
+        scrollnbrs.innerHTML += "<p>" + inc + ".</p>";
+    }
 }
