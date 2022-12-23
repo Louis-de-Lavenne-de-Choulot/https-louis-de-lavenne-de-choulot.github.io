@@ -201,6 +201,15 @@ body {
     .code-container, .item5 {
         font-size: small;
     }
+    .directory{
+        margin-top: 25px;
+    }
+    .item3 {
+        gap: 0.5%;
+    }
+    .item3 > div{
+        font-size: x-small;
+    }
     .item1 h1 {
         font-size: larger;
     }
