@@ -4,14 +4,12 @@
         <br>
         Je suis:
         <br>
-        manager, développeur web et admin serveur chez <span onclick="Definition('ewp')">Euro Web Partners</span>
+        manager, développeur web et admin serveur chez <span class="def" onclick="Definition('ewp')">Euro Web Partners</span>
         <br>
-        étudiant en 3ème année d'étude à <span onclick="Definition('algosup')">ALGOSUP</span>.
+        étudiant en 3ème année d'étude à <span class="def" onclick="Definition('algosup')">ALGOSUP</span>.
         <br>
         <br>
-        Mes points forts sont le back-end, l'administration serveur, le développement d'application / logiciels et la gestion de projet.
-        <br>
-        Ma faiblesse technique est le design sur lequel je m'entraine tout les jours.
+        Mes principaux atouts sont le back-end, l'administration serveur, le développement d'application / logiciels et la gestion de projet.
     </p>
     <p><br>en 3 mots je suis : <br> Passioné<br>Dynamique<br><span
             style="color:rgb(249, 211, 44);">Développeur</span> avant tout </p>

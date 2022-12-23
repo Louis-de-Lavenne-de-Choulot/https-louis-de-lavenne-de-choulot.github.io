@@ -1,7 +1,14 @@
 <span>
-    <p>
-        Voici une liste de mes projets :
+    <p class="inl">
+        Voici une liste de <span class="highlight">mes projets</span> :
     </p>
-    <p><br>en 3 mots je suis : <br> Passioné<br>Dynamique<br><span style="color:rgb(249, 211, 44);">Développeur</span>
-        avant tout </p>
+    <ul>
+        <li>
+            <a href="">Projet 1</a>
+        </li>
+        <li>
+            <a href="">Projet 2</a>
+        </li>
+    </ul>
+
 </span>

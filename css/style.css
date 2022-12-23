@@ -235,7 +235,17 @@ body {
     margin-right: 10px;
 } */
 
-.item4 p {
+
+.def {
+    color: #4e8b4e;
+    cursor: help;
+}
+
+.highlight{
+    font-weight: bold;
+}
+
+.item4 p, .item4 span, .item4 a, .item4 h3, .item4 h4, .item4 h5, .item4 h6 {
     margin-bottom: 0;
     margin-top: 0;
 }
