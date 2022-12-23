@@ -7,19 +7,19 @@ function Select(elm) {
     //add class "selected" to elm
     elm.classList.add("selected");
     // verify in for each elm in .item3 if innerText of elm exists
-    let item3 = document.querySelector(".item3").innerText;
+    let item3 = document.querySelector(".item3");
 
-    // slice by \n
-    item3 = item3.split("\n");
-    let exist = false;
-    for (let i = 0; i < item3.length; i++) {
-        if (item3[i] == elm.innerText) {
-            exist = true;
+    let exist;
+    // for each child
+    for (let i = 0; i < item3.children.length; i++) {
+        // if child innerText is the same as elm innerText remove child
+        if (item3.children[i].innerText == elm.innerText) {
+            exist = item3.children[i];
             break;
         }
     }
     //if not exist create new elm and add class="file-title html" hx-get="innerText" hx-trigger="click" hx-target=".item4" onclick="Select(document.getElementById('file-title'))"
-    if (!exist) {
+    if (exist == undefined) {
         let newElm = document.createElement("div");
         newElm.innerText = elm.innerText;
         newElm.classList.add("file-title");
@@ -28,9 +28,17 @@ function Select(elm) {
         newElm.setAttribute("hx-trigger", elm.getAttribute("hx-trigger"));
         newElm.setAttribute("hx-target", ".item4");
         newElm.setAttribute("onclick", "Select(document.getElementById('home')); this.remove();");
-
         document.querySelector(".item3").appendChild(newElm);
+        exist = newElm;
     }
+    // remove selected-inverse class from the elm using it and add it to exist
+    let selectedInverse = document.querySelector(".selected-inverse");
+    if (selectedInverse != undefined) {
+        selectedInverse.classList.remove("selected-inverse");
+    }
+    exist.classList.add("selected-inverse");
+
+
 }
 
 function DropDown(elm, elm2) {
@@ -91,7 +99,6 @@ window.onload = function () {
 
 function resized() {
     let nbr = Math.floor(document.getElementById('item4').scrollHeight / document.getElementById('balancing').clientHeight);
-    console.log(nbr);
     // for x in range 0 to nbr add 1 to elm with class "spe-item4"
     let inc = 0;
     scrollnbrs.innerText = "";

@@ -159,6 +159,9 @@ body {
 .selected {
     background-color: #34343c !important;
 }
+.selected-inverse {
+    background-color: #1e1e1e !important;
+}
 
 #drpdwn {
     /* constant transition */
