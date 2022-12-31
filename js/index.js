@@ -1,6 +1,9 @@
 let scrollnbrs;
 
 function Select(elm) {
+    // stop onclick event
+    event.stopPropagation();
+
     //search and remove class "selected" from an elm
     var selected = document.querySelector(".selected");
     selected.classList.remove("selected");
@@ -27,7 +30,13 @@ function Select(elm) {
         newElm.setAttribute("hx-get", elm.getAttribute("hx-get"));
         newElm.setAttribute("hx-trigger", elm.getAttribute("hx-trigger"));
         newElm.setAttribute("hx-target", ".item4");
-        newElm.setAttribute("onclick", "Select(document.getElementById('home')); this.remove();");
+        newElm.setAttribute("onclick", "Select(this)");
+        // create div in newElm
+        let newElm3 = document.createElement("div");
+        newElm3.classList.add("file-title-af");
+        // select home then remove parent
+        newElm3.setAttribute("onclick", "Select(document.getElementById('home')); this.parentElement.remove()");
+        newElm.appendChild(newElm3);
         document.querySelector(".item3").appendChild(newElm);
         exist = newElm;
     }
@@ -55,6 +64,19 @@ function DropDown(elm, elm2) {
     }
     //toggle class "dropdown" on elm2
     elm2.classList.toggle("dropdown");
+
+    // if elm is not an h4
+    if (elm.tagName != "H4") {
+    document.querySelector(".code-container").classList.toggle("dropdown-container");
+    // add background-color: #1e1e1e; to "item1"
+    if (document.getElementById("item1").style.backgroundColor == "rgb(30, 30, 30)") {
+        document.getElementById("item1").style.backgroundColor = "";
+    }else{
+        document.getElementById("item1").style.backgroundColor = "#1e1e1e";
+    }
+
+    resized();
+}
 }
 
 function Definition(name) {
@@ -95,13 +117,26 @@ window.onload = function () {
         scrollnbrs.scrollTop = this.scrollTop;
         console.log(this.scrollTop, scrollnbrs.scrollTop);
     });
+
+    // event listener on class "item4" and mutation observer
+    let observer = new MutationObserver(function (mutations) {
+        resized();
+    });
+    observer.observe(document.getElementById('item4'), {
+        // observe innerHTML
+        attributes: true,
+        childList: true,
+        characterData: true,
+        subtree: true
+
+    });
 }
 
 function resized() {
     let nbr = Math.floor(document.getElementById('item4').scrollHeight / document.getElementById('balancing').clientHeight);
     // for x in range 0 to nbr add 1 to elm with class "spe-item4"
     let inc = 0;
-    scrollnbrs.innerText = "";
+    scrollnbrs.innerHTML = "";
     while (inc < nbr) {
         inc++;
         scrollnbrs.innerHTML += "<p>" + inc + ".</p>";

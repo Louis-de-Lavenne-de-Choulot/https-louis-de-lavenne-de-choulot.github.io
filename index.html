@@ -11,6 +11,7 @@
     <meta property="og:image:type" content="image/png">
     <link rel="icon" type="image/x-icon" href="/images/favicon_io/favicon.ico">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/anims.css">
     <title>CV de Choulot</title>
     <!-- CSS only -->
     <script src="https://unpkg.com/htmx.org@1.8.4"
@@ -22,20 +23,9 @@
 <body>
 
     <div class="container">
-        <div class="item1">
-            <div id="presentation" class="presentation">
-                <div>
-                    <img class="pp" src="https://avatars.githubusercontent.com/u/71769482?v=4">
-                </div>
-                <h1>Louis de Lavenne de Choulot</h1>
-            </div>
-            <!-- centered round button  -->
-            <div class="round-button" onclick="DropDown(this, document.getElementById('presentation'))">
-            </div>
-
-        </div>
         <div class="item2">
-            <h4 class="directory" onclick="DropDown(this, document.getElementById('drpdwn'))">My Presentation</h4>
+            <h4 class="directory" id="balancing" onclick="DropDown(this, document.getElementById('drpdwn'))">My
+                Presentation</h4>
             <!-- list -->
             <ul id="drpdwn">
                 <button id="home" class="selected" hx-get="/html-elms/whoami" hx-trigger="click" hx-target=".item4"
@@ -54,17 +44,33 @@
             </ul>
         </div>
         <div class="item3">
-            <div class="file-title html" hx-get="whoami" hx-trigger="click" hx-target=".item4"
-                onclick="Select(document.getElementById('home')); this.remove();">Qui suis-je ?</div>
-        </div>
-        <div class="code-container">
-            <div class="spe-item4" id="spe-item4"></div>
-            <div class="item4" id="item4" style="text-align: justify;
-            ">
-                <p hx-get="/html-elms/whoami" hx-trigger="load" hx-target=".item4">Qui suis-je ?</p>
+
+            <div class="file-title html selected-inverse" hx-get="/html-elms/whoami" hx-trigger="click"
+                hx-target=".item4" onclick="Select(this)">
+                Qui suis-je ?<div class="file-title-af"
+                    onclick="Select(document.getElementById('home')); this.parentElement.remove()"></div>
             </div>
         </div>
-        <div class="item5"><p id="balancing">Footer</p></div>
+        <div class="item1" id="item1">
+
+            <div class="code-container">
+                <div class="spe-item4" id="spe-item4"></div>
+                <div class="item4" id="item4" style="text-align: justify;
+                ">
+                    <p hx-get="/html-elms/whoami" hx-trigger="load" hx-target=".item4">Qui suis-je ?</p>
+                </div>
+            </div>
+
+            <!-- centered round button  -->
+            <div class="round-button" onclick="DropDown(this, document.getElementById('presentation'))">
+            </div>
+            <div id="presentation" class="presentation">
+                <div>
+                    <img class="pp" src="https://avatars.githubusercontent.com/u/71769482?v=4">
+                </div>
+                <h1>Louis de Lavenne de Choulot</h1>
+            </div>
+        </div>
     </div>
 </body>
 

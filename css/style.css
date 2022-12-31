@@ -11,6 +11,12 @@ body {
     margin: 0;
 }
 
+.item1 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .item2 {
     background-color: #242426;
@@ -45,12 +51,6 @@ body {
     overflow: auto;
 }
 
-.item5 {
-    background-color: #0575C3;
-    font-size: larger;
-    line-height: 1.5;
-}
-
 .container {
     height: 100%;
     display: flex;
@@ -63,13 +63,15 @@ body {
 }
 
 .presentation {
-    justify-content: center;
     gap: 2%;
     padding: 2%;
     display: flex;
-    height: 100px;
+    max-height: 100px;
     opacity: 1;
-    transition: padding .3s linear, height 1s linear, opacity .3s linear !important;
+    transition: padding .3s linear, max-height 1s linear, opacity .3s linear !important;
+    align-items: center;
+    width: -webkit-fill-available;
+    justify-content: center;
 }
 
 .pp {
@@ -83,16 +85,18 @@ body {
     background-color: white;
     width: max-content;
     border: 1px black solid;
-    display: inline;
-    bottom: -12px;
     padding: 10px;
     border-radius: 100%;
     position: relative;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
 }
 
 .round-button::before{
     content: "\27A3";
-    padding: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
     transform: rotate(90deg);
     display: inline-block;
 }
@@ -125,7 +129,8 @@ body {
 
 .directory {
     display: flex;
-    font-size: 20px;
+    font-size: larger;
+    line-height: 1.5;
     font-weight: bold;
     color: #cccccc;
     margin-top: 15px;
@@ -165,9 +170,9 @@ body {
 
 #drpdwn {
     /* constant transition */
-    transition: height .5s linear;
+    transition: max-height .5s linear;
     overflow: hidden;
-    height: 100%;
+    max-height: 60%;
 }
 
 .file-title {
@@ -178,34 +183,38 @@ body {
     padding-right: 10px;
     padding-left: 20px;
     align-items: center;
-    pointer-events: none;
     font-size: small;
+    cursor: pointer;
 }
 
-.file-title::after {
+.file-title-af::after {
     /* thin cross */
     content: "\2715";
     font-size: x-small;
-    cursor: pointer;
     pointer-events: all;
     margin-left: 5px;
 }
 
+.file-title-af:hover::after {
+    background-color: #737373;
+}
+
 .code-container {
+    transition: padding .3s linear, height 1s linear, opacity .3s linear !important;
     display: flex;
     font-size: larger;
     line-height: 1.5;
-    height: inherit;
     overflow: auto;
-    min-height: -webkit-fill-available;
+    height: 0;
+    width: 100%;
 }
 
 @media screen and (max-width: 600px) {
-    .code-container, .item5 {
-        font-size: small;
-    }
     .directory{
         margin-top: 25px;
+    }
+    .item1 h1 {
+        font-size: larger;
     }
     .item3 {
         gap: 0.5%;
@@ -213,8 +222,15 @@ body {
     .item3 > div{
         font-size: x-small;
     }
-    .item1 h1 {
-        font-size: larger;
+    .spe-item4 {
+        padding-right: 10px;
+        text-align: end;
+    }
+    .item4, .spe-item4 {
+        font-size: small;
+    }
+    .item4 {
+        padding-right: 10px;
     }
 }
 
@@ -253,6 +269,10 @@ body {
     margin-top: 0;
 }
 
+.item4 a{
+    color: aliceblue;
+}
+
 .definition p {
     display: none;
 }
@@ -271,32 +291,3 @@ body {
     color: #b8adad;
 }
 
-.dropdown {
-    height: 0 !important;
-    transition: padding 3s linear;
-}
-
-.dropdown .pp {
-    width: 0;
-    height: 0;
-}
-
-/* presentation and dropdown */
-.item1 .dropdown {
-    padding: 0;
-    opacity: 0;
-}
-
-.rotate::before{
-    transform: rotate(-90deg);
-}
-
-.directory::before, .round-button::before {
-    /* apply transition 0.5s linear */
-    transition: transform .5s linear;
-}
-
-.rotate-down::before {
-    /* apply animated closing */
-    transform: rotate(0deg);
-}

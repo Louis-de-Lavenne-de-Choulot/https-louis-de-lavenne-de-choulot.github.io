@@ -1,0 +1,36 @@
+.dropdown {
+    max-height: 0 !important;
+}
+
+.dropdown-container{
+    height: 100%;
+}
+
+.dropdown .pp {
+    width: 0;
+    height: 0;
+}
+
+/* presentation and dropdown */
+.item1 .dropdown {
+    padding: 0;
+    opacity: 0;
+}
+
+.rotate::before{
+    transform: rotate(-90deg);
+}
+
+/* .rotate {
+    transform: translateY(45%);
+} */
+
+.directory::before, .round-button::before {
+    /* apply transition 0.5s linear */
+    transition: transform .5s linear;
+}
+
+.rotate-down::before {
+    /* apply animated closing */
+    transform: rotate(0deg);
+}

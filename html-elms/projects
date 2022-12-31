@@ -2,12 +2,18 @@
     <p class="inl">
         Voici une liste de <span class="highlight">mes projets</span> :
     </p>
-    <ul>
+    <ul class="skills-list">
+        <h4>Personnels</h4>
         <li>
-            <a href="">Projet 1</a>
+            <a href="https://bestiaever.ml">Seveur sécurisé - golang compilé</a>
         </li>
         <li>
-            <a href="">Projet 2</a>
+            <a href="https://github.com/Louis-de-Lavenne-de-Choulot/Personal-AI">Personal AI (essai de reproduction d'Alexa) - Golang
+            </a>
+        </li>
+        <h4>Professionnel / Scolaire</h4>
+        <li>
+            <a href="https://github.com/Louis-de-Lavenne-de-Choulot/ALGOSUP_2022_Project_4_F">Simulation VR - Unity C#</a>
         </li>
     </ul>
 
