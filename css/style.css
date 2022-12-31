@@ -33,13 +33,15 @@ body {
     color: #858585;
     width: 6%;
     overflow: auto;
-    overflow: -moz-scrollbars-none; /* Firefox */
-    -ms-overflow-style: none; /* IE 10+ */
+    overflow: -moz-scrollbars-none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
 }
 
 .spe-item4::-webkit-scrollbar {
     width: 0;
-    
+
 }
 
 
@@ -64,18 +66,43 @@ body {
     /* background-color: rgba(255, 255, 255, 0.8); */
     text-align: center;
 }
+@import url('//raw.githubusercontent.com/necolas/normalize.css/master/normalize.css');
 
 .presentation {
+    width: auto;
     gap: 2%;
     padding: 2%;
     display: flex;
-    max-height: 100px;
+    flex-direction: column;
+    max-height: 100%;
     opacity: 1;
     transition: padding .3s linear, max-height 1s linear, opacity .3s linear !important;
     align-items: center;
-    width: -webkit-fill-available;
-    justify-content: center;
+    /* rounded border with color and shades */
+
+    --angle: 0deg;
+    border: 8px solid;
+    border-image: linear-gradient(var(--angle), #12c2e9, #c471ed, #f64f59) 1;
+    animation: 5s brotate linear infinite;
+    
 }
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes brotate {
+    0% {
+        --angle: 0deg;
+    }
+
+    100% {
+        --angle: 360deg;
+    }
+}
+
 
 .pp {
     border-radius: 50%;
@@ -84,7 +111,7 @@ body {
     transition: width 1s linear, height 1s linear;
 }
 
-.round-button{
+.round-button {
     background-color: white;
     width: max-content;
     border: 1px black solid;
@@ -96,7 +123,7 @@ body {
     z-index: 1;
 }
 
-.round-button::before{
+.round-button::before {
     content: "\27A3";
     padding-left: 2px;
     padding-right: 2px;
@@ -167,6 +194,7 @@ body {
 .selected {
     background-color: #34343c !important;
 }
+
 .selected-inverse {
     background-color: #1e1e1e !important;
 }
@@ -213,25 +241,32 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-    .directory{
+    .directory {
         margin-top: 25px;
     }
+
     .item1 h1 {
         font-size: larger;
     }
+
     .item3 {
         gap: 0.5%;
     }
-    .item3 > div{
+
+    .item3>div {
         font-size: x-small;
     }
+
     .spe-item4 {
         padding-right: 10px;
         text-align: end;
     }
-    .item4, .spe-item4 {
+
+    .item4,
+    .spe-item4 {
         font-size: small;
     }
+
     .item4 {
         padding-right: 10px;
     }
@@ -263,16 +298,22 @@ body {
     cursor: help;
 }
 
-.highlight{
+.highlight {
     font-weight: bold;
 }
 
-.item4 p, .item4 span, .item4 a, .item4 h3, .item4 h4, .item4 h5, .item4 h6 {
+.item4 p,
+.item4 span,
+.item4 a,
+.item4 h3,
+.item4 h4,
+.item4 h5,
+.item4 h6 {
     margin-bottom: 0;
     margin-top: 0;
 }
 
-.item4 a{
+.item4 a {
     color: aliceblue;
 }
 
@@ -293,4 +334,3 @@ body {
 .definition {
     color: #b8adad;
 }
-
