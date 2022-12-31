@@ -28,16 +28,16 @@
                 Presentation</h4>
             <!-- list -->
             <ul id="drpdwn">
-                <button id="home" class="selected" hx-get="/html-elms/whoami" hx-trigger="click" hx-target=".item4"
+                <button id="home" class="selected" hx-get="/html-elms/whoami" hx-trigger="click" hx-target=".item4-container"
                     onclick="Select(this)">
                     <li class="html">Qui suis-je ?</li>
                 </button>
                 <!-- add selected class if clicked -->
-                <button id="experience" hx-get="/html-elms/experience" hx-trigger="click" hx-target=".item4"
+                <button id="experience" hx-get="/html-elms/experience" hx-trigger="click" hx-target=".item4-container"
                     onclick="Select(this)">
                     <li class="html">Mes expérience</li>
                 </button>
-                <button id="projects" hx-get="/html-elms/projects" hx-trigger="click" hx-target=".item4"
+                <button id="projects" hx-get="/html-elms/projects" hx-trigger="click" hx-target=".item4-container"
                     onclick="Select(this)">
                     <li class="html">Mes projets</li>
                 </button>
@@ -46,7 +46,7 @@
         <div class="item3">
 
             <div class="file-title html selected-inverse" hx-get="/html-elms/whoami" hx-trigger="click"
-                hx-target=".item4" onclick="Select(this)">
+                hx-target=".item4-container" onclick="Select(this)">
                 Qui suis-je ?<div class="file-title-af"
                     onclick="Select(document.getElementById('home')); this.parentElement.remove()"></div>
             </div>
@@ -57,20 +57,22 @@
                 <div class="spe-item4" id="spe-item4"></div>
                 <div class="item4" id="item4" style="text-align: justify;
                 ">
-                    <p hx-get="/html-elms/whoami" hx-trigger="load" hx-target=".item4">Qui suis-je ?</p>
-                </div>
-            </div>
-
-            <!-- centered round button  -->
-            <div class="round-button" onclick="DropDown(this, document.getElementById('presentation'))">
-            </div>
-            <div id="presentation" class="presentation">
-                <div>
-                    <img class="pp" src="https://avatars.githubusercontent.com/u/71769482?v=4">
-                </div>
-                <h1>Louis de Lavenne de Choulot</h1>
+                <div class="item4-container" id="item4-container">
+                <p hx-get="/html-elms/whoami" hx-trigger="load" hx-target=".item4-container">Qui suis-je ?</p>
             </div>
         </div>
+    </div>
+
+    <!-- centered round button  -->
+    <div class="round-button" onclick="DropDown(this, document.getElementById('presentation'))">
+    </div>
+    <div id="presentation" class="presentation">
+        <div>
+            <img class="pp" src="https://avatars.githubusercontent.com/u/71769482?v=4">
+        </div>
+        <h1>Louis de Lavenne de Choulot</h1>
+    </div>
+    </div>
     </div>
 </body>
 

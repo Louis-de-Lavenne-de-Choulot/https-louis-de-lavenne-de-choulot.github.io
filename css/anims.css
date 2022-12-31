@@ -21,16 +21,16 @@
     transform: rotate(-90deg);
 }
 
-/* .rotate {
-    transform: translateY(45%);
-} */
-
 .directory::before, .round-button::before {
     /* apply transition 0.5s linear */
-    transition: transform .5s linear;
+    transition: transform .5s linear, translate .5s linear;
 }
 
 .rotate-down::before {
     /* apply animated closing */
     transform: rotate(0deg);
+}
+
+.item1 .rotate{
+    transform: translateY(40%);
 }

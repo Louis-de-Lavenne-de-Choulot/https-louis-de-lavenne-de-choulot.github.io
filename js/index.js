@@ -27,16 +27,13 @@ function Select(elm) {
         newElm.innerText = elm.innerText;
         newElm.classList.add("file-title");
         newElm.classList.add("html");
-        newElm.setAttribute("hx-get", elm.getAttribute("hx-get"));
-        newElm.setAttribute("hx-trigger", elm.getAttribute("hx-trigger"));
-        newElm.setAttribute("hx-target", ".item4");
-        newElm.setAttribute("onclick", "Select(this)");
+        newElm.setAttribute("onclick", "Select(this); DynamicLoading('"+elm.getAttribute("hx-get")+"')");
         // create div in newElm
-        let newElm3 = document.createElement("div");
-        newElm3.classList.add("file-title-af");
+        let newElm2 = document.createElement("div");
+        newElm2.classList.add("file-title-af");
         // select home then remove parent
-        newElm3.setAttribute("onclick", "Select(document.getElementById('home')); this.parentElement.remove()");
-        newElm.appendChild(newElm3);
+        newElm2.setAttribute("onclick", "Select(document.getElementById('home')); this.parentElement.remove()");
+        newElm.appendChild(newElm2);
         document.querySelector(".item3").appendChild(newElm);
         exist = newElm;
     }
@@ -46,8 +43,17 @@ function Select(elm) {
         selectedInverse.classList.remove("selected-inverse");
     }
     exist.classList.add("selected-inverse");
+}
 
-
+function DynamicLoading(pageName) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', pageName, true);
+    xhr.onreadystatechange = function () {
+        if (this.readyState !== 4) return;
+        if (this.status !== 200) return; // or whatever error handling you want
+        document.getElementById('item4-container').innerHTML = this.responseText;
+    };
+    xhr.send();
 }
 
 function DropDown(elm, elm2) {
@@ -67,16 +73,16 @@ function DropDown(elm, elm2) {
 
     // if elm is not an h4
     if (elm.tagName != "H4") {
-    document.querySelector(".code-container").classList.toggle("dropdown-container");
-    // add background-color: #1e1e1e; to "item1"
-    if (document.getElementById("item1").style.backgroundColor == "rgb(30, 30, 30)") {
-        document.getElementById("item1").style.backgroundColor = "";
-    }else{
-        document.getElementById("item1").style.backgroundColor = "#1e1e1e";
-    }
+        document.querySelector(".code-container").classList.toggle("dropdown-container");
+        // add background-color: #1e1e1e; to "item1"
+        if (document.getElementById("item1").style.backgroundColor == "rgb(30, 30, 30)") {
+            document.getElementById("item1").style.backgroundColor = "";
+        } else {
+            document.getElementById("item1").style.backgroundColor = "#1e1e1e";
+        }
 
-    resized();
-}
+        resized();
+    }
 }
 
 function Definition(name) {
@@ -122,7 +128,7 @@ window.onload = function () {
     let observer = new MutationObserver(function (mutations) {
         resized();
     });
-    observer.observe(document.getElementById('item4'), {
+    observer.observe(document.getElementById('item4-container'), {
         // observe innerHTML
         attributes: true,
         childList: true,
@@ -133,7 +139,7 @@ window.onload = function () {
 }
 
 function resized() {
-    let nbr = Math.floor(document.getElementById('item4').scrollHeight / document.getElementById('balancing').clientHeight);
+    let nbr = Math.floor(document.getElementById('item4-container').scrollHeight / document.getElementById('balancing').clientHeight + .5);
     // for x in range 0 to nbr add 1 to elm with class "spe-item4"
     let inc = 0;
     scrollnbrs.innerHTML = "";

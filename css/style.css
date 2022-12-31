@@ -12,7 +12,7 @@ body {
 }
 
 .item1 {
-    height: 100%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,10 +45,13 @@ body {
 
 .item4 {
     background-color: #1e1e1e;
-    text-align: left;
-    color: #8ac5e1;
     width: 100%;
     overflow: auto;
+}
+
+.item4-container {
+    text-align: left;
+    color: #8ac5e1;
 }
 
 .container {
