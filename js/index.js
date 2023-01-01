@@ -31,8 +31,8 @@ function Select(elm) {
         // create div in newElm
         let newElm2 = document.createElement("div");
         newElm2.classList.add("file-title-af");
-        // select home then remove parent
-        newElm2.setAttribute("onclick", "Select(document.getElementById('home')); this.parentElement.remove()");
+        // select whoami then remove parent
+        newElm2.setAttribute("onclick", "Select(document.getElementById('whoami')); this.parentElement.remove()");
         newElm.appendChild(newElm2);
         document.querySelector(".item3").appendChild(newElm);
         exist = newElm;
@@ -49,6 +49,9 @@ function Select(elm) {
     if (!presentation.classList.contains("dropdown")) {
         DropDown(document.querySelector(".round-button"), presentation);
     }
+
+    // add anchor to url with hx get trimmed of "/html-elms/"
+    window.location.hash = elm.getAttribute("hx-get").substring(11)+"-a";
 }
 
 function DynamicLoading(pageName) {
@@ -77,8 +80,6 @@ function DropDown(elm, elm2) {
     //toggle class "dropdown" on elm2
     elm2.classList.toggle("dropdown");
 
-    // if elm is not an h4
-    if (elm.tagName != "H4") {
         document.querySelector(".code-container").classList.toggle("dropdown-container");
         // add background-color: #1e1e1e; to "item1"
         if (document.getElementById("item1").style.backgroundColor == "rgb(30, 30, 30)") {
@@ -88,7 +89,6 @@ function DropDown(elm, elm2) {
         }
 
         resized();
-    }
 }
 
 function Definition(name) {
@@ -118,8 +118,15 @@ function Definition(name) {
 
 // wait for page load
 window.onload = function () {
-
     scrollnbrs = document.getElementById("spe-item4");
+    
+    // if links has anchor then Select(elm with id anchor)
+    if (window.location.hash) {
+        console.log(window.location.hash.substring(1, window.location.hash.length - 2));
+        let hash = window.location.hash.substring(1, window.location.hash.length - 2);
+        Select(document.getElementById(hash));
+        DynamicLoading("/html-elms/" + hash);
+    }
 
     resized();
 
@@ -127,7 +134,6 @@ window.onload = function () {
     document.getElementById('item4').addEventListener("scroll", function () {
         // assign offsetTop of elm with class "item4" to elm with class "spe-item4"
         scrollnbrs.scrollTop = this.scrollTop;
-        console.log(this.scrollTop, scrollnbrs.scrollTop);
     });
 
     // event listener on class "item4" and mutation observer

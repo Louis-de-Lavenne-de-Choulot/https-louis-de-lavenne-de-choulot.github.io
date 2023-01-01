@@ -12,6 +12,8 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon_io/favicon.ico">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/anims.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
     <title>CV de Choulot</title>
     <!-- CSS only -->
     <script src="https://unpkg.com/htmx.org@1.8.4"
@@ -24,18 +26,18 @@
 
     <div class="container">
         <div class="item2">
-            <h4 class="directory" id="balancing" onclick="DropDown(this, document.getElementById('drpdwn'))">My
+            <h4 class="directory" id="balancing">
                 Presentation</h4>
             <!-- list -->
             <ul id="drpdwn">
-                <button id="home" class="selected" hx-get="/html-elms/whoami" hx-trigger="click" hx-target=".item4-container"
-                    onclick="Select(this)">
-                    <li class="html">Qui suis-je ?</li>
-                </button>
                 <!-- add selected class if clicked -->
                 <button id="experience" hx-get="/html-elms/experience" hx-trigger="click" hx-target=".item4-container"
                     onclick="Select(this)">
-                    <li class="html">Mes expérience</li>
+                    <li class="html">Mes expériences</li>
+                </button>
+                <button id="whoami" class="selected" hx-get="/html-elms/whoami" hx-trigger="click"
+                    hx-target=".item4-container" onclick="Select(this)">
+                    <li class="html">Qui suis-je ?</li>
                 </button>
                 <button id="projects" hx-get="/html-elms/projects" hx-trigger="click" hx-target=".item4-container"
                     onclick="Select(this)">
@@ -48,7 +50,7 @@
             <div class="file-title html selected-inverse" hx-get="/html-elms/whoami" hx-trigger="click"
                 hx-target=".item4-container" onclick="Select(this)">
                 Qui suis-je ?<div class="file-title-af"
-                    onclick="Select(document.getElementById('home')); this.parentElement.remove()"></div>
+                    onclick="Select(document.getElementById('whoami')); this.parentElement.remove()"></div>
             </div>
         </div>
         <div class="item1" id="item1">
@@ -57,32 +59,44 @@
                 <div class="spe-item4" id="spe-item4"></div>
                 <div class="item4" id="item4" style="text-align: justify;
                 ">
-                <div class="item4-container" id="item4-container">
-                <p hx-get="/html-elms/whoami" hx-trigger="load" hx-target=".item4-container">Qui suis-je ?</p>
+                    <div class="item4-container" id="item4-container">
+                        <p hx-get="/html-elms/whoami" hx-trigger="load" hx-target=".item4-container">Qui suis-je ?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- centered round button  -->
+            <div class="round-button" onclick="DropDown(this, document.getElementById('presentation'))">
+            </div>
+            <div id="presentation" class="presentation">
+                <div>
+                    <img class="pp" src="https://avatars.githubusercontent.com/u/71769482?v=4">
+                </div>
+                <h1>Louis de Lavenne de Choulot</h1>
+                <p>software / app / backend développeur</p>
+                <div class="contact">
+                    <!-- inline tel and mail -->
+                    <a href="tel:+337 81 86 32 36">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/phone.png">07 81 86 32 36
+                    </a>
+                    <a href="mailto:louisdechoulot@gmail.com">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/email.png">louisdechoulot@gmail.com
+                    </a>
+                </div>
+                <div class="socials">
+                    <!-- add github logo with link to gthb and lkdn logo  -->
+                    <a href="https://github.com/Louis-de-Lavenne-de-Choulot">
+                        <img class="social"
+                            src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                            style="width: 100px;">
+                    </a>
+                    <a href="https://fr.linkedin.com/in/louis-de-lavenne-de-choulot-b911191b8">
+                        <img class="social" src="https://cdn.worldvectorlogo.com/logos/linkedin-icon.svg"
+                            style="width: 75px;">
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-
-    <!-- centered round button  -->
-    <div class="round-button" onclick="DropDown(this, document.getElementById('presentation'))">
-    </div>
-    <div id="presentation" class="presentation">
-        <div>
-            <img class="pp" src="https://avatars.githubusercontent.com/u/71769482?v=4">
-        </div>
-        <h1>Louis de Lavenne de Choulot</h1>
-        <p>software / app / backend developper</p>
-        <div class="socials">
-            <!-- add github logo with link to gthb and lkdn logo  -->
-            <a href="">
-                <img class="social" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" style="width: 100px;">
-            </a>
-            <a href="">
-                <img class="social" src="https://cdn.worldvectorlogo.com/logos/linkedin-icon.svg" style="width: 75px;">
-            </a>
-        </div>
-    </div>
-    </div>
     </div>
 </body>
 
