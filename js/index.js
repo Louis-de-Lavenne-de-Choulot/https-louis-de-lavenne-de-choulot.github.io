@@ -27,7 +27,8 @@ function Select(elm) {
         newElm.innerText = elm.innerText;
         newElm.classList.add("file-title");
         newElm.classList.add("html");
-        newElm.setAttribute("onclick", "Select(this); DynamicLoading('"+elm.getAttribute("hx-get")+"')");
+        newElm.setAttribute("onclick", "Select(this); DynamicLoading('"+elm.getAttribute("hx-get")+"');");
+        newElm.setAttribute("hx-get", elm.getAttribute("hx-get"));
         // create div in newElm
         let newElm2 = document.createElement("div");
         newElm2.classList.add("file-title-af");
@@ -50,8 +51,8 @@ function Select(elm) {
         DropDown(document.querySelector(".round-button"), presentation);
     }
 
-    // add anchor to url with hx get trimmed of "/html-elms/"
-    window.location.hash = elm.getAttribute("hx-get").substring(11)+"-a";
+    // add  ? to url with hx get trimmed of "/html-elms/"
+    window.history.pushState("", "", "?"+elm.getAttribute("hx-get").substring(11, elm.getAttribute("hx-get").length)+"-a");
 }
 
 function DynamicLoading(pageName) {
@@ -120,10 +121,9 @@ function Definition(name) {
 window.onload = function () {
     scrollnbrs = document.getElementById("spe-item4");
     
-    // if links has anchor then Select(elm with id anchor)
-    if (window.location.hash) {
-        console.log(window.location.hash.substring(1, window.location.hash.length - 2));
-        let hash = window.location.hash.substring(1, window.location.hash.length - 2);
+    // if links has ? then get the value after ? and select elm with id of it
+    if (window.location.search) {
+        let hash = window.location.search.substring(1, window.location.search.length - 2);
         Select(document.getElementById(hash));
         DynamicLoading("/html-elms/" + hash);
     }
@@ -151,7 +151,7 @@ window.onload = function () {
 }
 
 function resized() {
-    let nbr = Math.floor(document.getElementById('item4-container').scrollHeight / document.getElementById('balancing').clientHeight + .5);
+    let nbr = Math.floor(document.getElementById('item4-container').scrollHeight / document.getElementById('balancing').clientHeight);
     // for x in range 0 to nbr add 1 to elm with class "spe-item4"
     let inc = 0;
     scrollnbrs.innerHTML = "";

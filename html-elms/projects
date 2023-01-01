@@ -2,37 +2,37 @@
     <ul class="skills-list">
         <h4>Personnels</h4>
         <li>
-            <a href="https://bestiaever.ml">Seveur sécurisé - Go compilé</a>
+            <a target="_blank" href="https://bestiaever.ml">Seveur sécurisé - Go compilé</a>
             <br>
-            <a href="https://github.com/Louis-de-Lavenne-de-Choulot/Go-server" style="margin-left:18vh;">- code
+            <a target="_blank" href="https://github.com/Louis-de-Lavenne-de-Choulot/Go-server" style="margin-left:18vh;">- code
                 source</a>
         </li>
         <li>
-            <a href="https://github.com/Louis-de-Lavenne-de-Choulot/Personal-AI">Personal AI (essai de reproduction
+            <a target="_blank" href="https://github.com/Louis-de-Lavenne-de-Choulot/Personal-AI">Personal AI (essai de reproduction
                 d'Alexa) - Go
             </a>
         </li>
         <li>
-            <a href="https://github.com/BrendonDesvaux/Limitless">Limitless (Jeu RPG VR, voir la branche
+            <a target="_blank" href="https://github.com/BrendonDesvaux/Limitless">Limitless (Jeu RPG VR, voir la branche
                 Limitless-v0.0.1 pour le code) - C#</a>
             </a>
         </li>
         <br>
         <h4>Professionnels / Scolaires</h4>
         <li>
-            <a href="https://github.com/Louis-de-Lavenne-de-Choulot/ALGOSUP_2022_Project_4_F">Simulation VR - Unity C#
+            <a target="_blank" href="https://github.com/Louis-de-Lavenne-de-Choulot/ALGOSUP_2022_Project_4_F">Simulation VR - Unity C#
                 -> manager et développeur</a>
         </li>
         <li>
-            <a href="https://github.com/ClementCaton/ALGOSUP_2022_Project_3_A">Synthetiseur de son - F# ->
+            <a target="_blank" href="https://github.com/ClementCaton/ALGOSUP_2022_Project_3_A">Synthetiseur de son - F# ->
                 développeur</a>
         </li>
         <li>
-            <a href="https://1rose1chou.com/">
+            <a target="_blank" href="https://1rose1chou.com/">
                 Site web experte puériculture hotel de prestige - Wordpress / Divi -> développeur</a>
         </li>
         <li>
-            <a href="https://ewp.fr/">
+            <a target="_blank" href="https://ewp.fr/">
                 Site web de l'entreprise - Wordpress / Divi -> développeur, textes & design</a>
         </li>
     </ul>

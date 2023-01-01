@@ -19,10 +19,10 @@
             style="color:rgb(249, 211, 44);">Développeur</span> avant tout
     </p>
     <br>
-    <h1 style="2em" >Mes Compétences</h1>
+    <h1>Mes Compétences</h1>
     <p>
     <br>
-    <img src="images/competences.png" alt="Compétences" >
+    <img src="images/competences.png" alt="Compétences" style="width:70%;">
     </p>
 </span>
 <span class="definition">
