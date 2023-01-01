@@ -43,6 +43,12 @@ function Select(elm) {
         selectedInverse.classList.remove("selected-inverse");
     }
     exist.classList.add("selected-inverse");
+
+    // query select code-container and verify if it has class dropdown dropdown-container
+    let presentation = document.querySelector(".presentation");
+    if (!presentation.classList.contains("dropdown")) {
+        DropDown(document.querySelector(".round-button"), presentation);
+    }
 }
 
 function DynamicLoading(pageName) {
