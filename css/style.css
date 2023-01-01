@@ -69,7 +69,7 @@ body {
 @import url('//raw.githubusercontent.com/necolas/normalize.css/master/normalize.css');
 
 .presentation {
-    width: auto;
+    width: 50%;
     gap: 2%;
     padding: 2%;
     display: flex;
@@ -108,6 +108,13 @@ body {
     width: 100px;
     height: 100px;
     transition: width 1s linear, height 1s linear;
+}
+
+.presentation h1 {
+    font-size: xx-large;
+}
+.presentation p {
+    font-size: larger;
 }
 
 .socials {
@@ -182,7 +189,8 @@ body {
     margin-right: 5px;
 }
 
-.html {
+.html {    
+    font-size: initial;
     padding: 5px;
     cursor: pointer;
     color: #4e8b4e;
