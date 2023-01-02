@@ -1,7 +1,6 @@
 <span>
+<h1>Je suis:</h1>
     <p>
-        Je suis:
-        <br>
         - Manageur, développeur web et administateur serveur chez <span class="def" onclick="Definition('ewp')">Euro Web
             Partners</span>
         <br>
@@ -22,7 +21,25 @@
     <h1>Mes Compétences</h1>
     <p>
     <br>
-    <img src="images/competences.png" alt="Compétences" style="width:70%;">
+    <img class="comp" src="images/competences.png" alt="Compétences" style="width:100%;">
+    </p>
+    <br>
+    <h1>Langues</h1>
+    <p>
+    Anglais : <span style="color:rgb(249, 211, 44);">C1</span>
+    <br>
+    Allemand : <span style="color:rgb(249, 211, 44);">A2</span>
+    </p>
+    <br>
+    <h1>Loisirs</h1>
+    <p>
+    Développement d'application, de jeux vidéos et tests de nouvelles technologies.
+    <br>
+    Écouter de la Musique 
+    <br>
+    Sciences (génétique en particulier)
+    <br>
+    Actualités Internationales
     </p>
 </span>
 <span class="definition">
