@@ -9,8 +9,8 @@ function Select(elm) {
     selected.classList.remove("selected");
     //add class "selected" to elm
     elm.classList.add("selected");
-    // verify in for each elm in .item3 if innerText of elm exists
-    let item3 = document.querySelector(".item3");
+    // verify in for each elm in .sm-nvbr if innerText of elm exists
+    let item3 = document.querySelector(".sm-nvbr");
 
     let exist;
     // for each child
@@ -35,7 +35,7 @@ function Select(elm) {
         // select whoami then remove parent
         newElm2.setAttribute("onclick", "Select(document.getElementById('whoami')); this.parentElement.remove()");
         newElm.appendChild(newElm2);
-        document.querySelector(".item3").appendChild(newElm);
+        document.querySelector(".sm-nvbr").appendChild(newElm);
         exist = newElm;
     }
     // remove selected-inverse class from the elm using it and add it to exist

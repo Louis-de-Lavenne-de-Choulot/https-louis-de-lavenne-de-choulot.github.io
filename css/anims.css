@@ -14,17 +14,19 @@
     height: 0;
 }
 
-.presentation * {
-    transition: height .3 linear, margin .3s linear;
-}
-
 .dropdown * {
     height: 0;
     margin: 0;
+    display: none;
 }
 
 .rotate::before{
     transform: rotate(-90deg);
+}
+
+.round-button::before {
+    /* apply transition 0.5s linear */
+    transition: transform .5s linear, translate .5s linear;
 }
 
 .rotate-down::before {
