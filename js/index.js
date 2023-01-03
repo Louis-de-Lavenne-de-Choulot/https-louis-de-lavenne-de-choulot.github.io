@@ -48,9 +48,8 @@ function Select(elm) {
     // query select code-container and verify if it has class dropdown dropdown-container
     let presentation = document.querySelector(".presentation");
     if (!presentation.classList.contains("dropdown")) {
-        DropDown(document.querySelector(".round-button"), presentation);
+        DropDown(presentation);
     }
-
     // add  ? to url with hx get trimmed of "/html-elms/"
     window.history.pushState("", "", "?"+elm.getAttribute("hx-get").substring(11, elm.getAttribute("hx-get").length)+"-a");
 }
@@ -66,30 +65,13 @@ function DynamicLoading(pageName) {
     xhr.send();
 }
 
-function DropDown(elm, elm2) {
-    //elm ::before rotate 90deg
-    if (elm.classList.contains("rotate")) {
-        elm.classList.remove("rotate");
-        // if elm has class directory add class rotate-down
-        if (elm.classList.contains("directory")) {
-            elm.classList.add("rotate-down");
-        }
-    } else {
-        elm.classList.add("rotate");
-        elm.classList.remove("rotate-down");
-    }
+function DropDown(elm2) {
     //toggle class "dropdown" on elm2
     elm2.classList.toggle("dropdown");
 
-        document.querySelector(".code-container").classList.toggle("dropdown-container");
-        // add background-color: #1e1e1e; to "item1"
-        if (document.getElementById("item1").style.backgroundColor == "rgb(30, 30, 30)") {
-            document.getElementById("item1").style.backgroundColor = "";
-        } else {
-            document.getElementById("item1").style.backgroundColor = "#1e1e1e";
-        }
+    document.querySelector(".code-container").classList.toggle("dropdown-container");
 
-        resized();
+    resized();
 }
 
 function Definition(name) {

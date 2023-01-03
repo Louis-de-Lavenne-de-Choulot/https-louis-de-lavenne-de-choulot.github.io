@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/anims.css">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Tangerine">
-    <title>CV de Choulot</title>
+    <title>CV Louis de Choulot</title>
     <!-- CSS only -->
     <script src="https://unpkg.com/htmx.org@1.8.4"
         integrity="sha384-wg5Y/JwF7VxGk4zLsJEcAojRtlVp1FKKdGy1qN+OMtdq72WRvX/EdRdqg/LOhYeV" crossorigin="anonymous">
@@ -27,8 +27,12 @@
     <div class="container">
         <div class="item2">
             <a href="/">
-            <h4 class="directory" id="balancing">
-                Louis de Choulot</h4></a>
+            <h4 class="directory selected" id="balancing">
+                <!-- house in white img from icons8 site-->
+                <img src="/images/home.png"/>
+
+
+            </h4></a>
             <!-- list -->
             <ul id="drpdwn">
                 <!-- add selected class if clicked -->
@@ -36,7 +40,7 @@
                     onclick="Select(this)">
                     <li class="html">Mes expériences</li>
                 </button>
-                <button id="whoami" class="selected" hx-get="/html-elms/whoami" hx-trigger="click"
+                <button id="whoami" hx-get="/html-elms/whoami" hx-trigger="click"
                     hx-target=".item4-container" onclick="Select(this)">
                     <li class="html">Qui suis-je ?</li>
                 </button>
@@ -64,10 +68,6 @@
                         <p hx-get="/html-elms/whoami" hx-trigger="load" hx-target=".item4-container">Qui suis-je ?</p>
                     </div>
                 </div>
-            </div>
-
-            <!-- centered round button  -->
-            <div class="round-button" onclick="DropDown(this, document.getElementById('presentation'))">
             </div>
             <div id="presentation" class="presentation">
                 <div>
