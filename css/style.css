@@ -11,6 +11,7 @@ body {
     left: 0;
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
 }
 
 a {
@@ -98,9 +99,7 @@ a {
     display: flex;
     flex-direction: column;
     opacity: 1;
-    transition: border .3s linear, padding .3s linear, max-height 1s linear, opacity .3s linear !important;
     align-items: center;
-    max-height: 100%;
     /* rounded border with color and shades */
     --angle: 0deg;
     border: 36px solid;
@@ -140,7 +139,7 @@ a {
 }
 
 .nvbr .contact{
-    bottom: 0;
+    color: #1177cf;
     position: absolute;
 }
 
@@ -149,18 +148,19 @@ a {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    color: aliceblue;
 }
 
 .contact a {
     display: flex;
     width: max-content;
     align-items: center;
-    color: #242426;
+    color: #e4e4e4;
 }
 
 .contact img {
     width: 20px;
+    -webkit-filter: invert(90%); /* safari 6.0 - 9.0 */
+          filter: invert(90%);
 }
 
 .socials {
@@ -168,6 +168,12 @@ a {
     align-items: center;
     width: 100%;
     justify-content: space-evenly;
+}
+
+/* socials first child */
+.invert  {
+    -webkit-filter: invert(90%); /* safari 6.0 - 9.0 */
+    filter: invert(90%);
 }
 
 .social {
@@ -271,7 +277,7 @@ a {
 }
 
 .code-container {
-    transition: padding .3s linear, height 1s linear, opacity .3s linear !important;
+    transition: padding .3s linear, height .2s linear, opacity .3s linear !important;
     display: flex;
     font-size: larger;
     line-height: 2;
@@ -418,3 +424,20 @@ a {
 .definition {
     color: #b8adad;
 }
+
+.code-container::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(122,153,217)), color-stop(0.72, rgb(73,125,189)), color-stop(0.86, rgb(28,58,148)));
+}
+
+.code-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.code-container::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
