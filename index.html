@@ -12,9 +12,8 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon_io/favicon.ico">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/anims.css">
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Tangerine">
-    <title>CV de Choulot</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <title>CV Louis de Choulot</title>
     <!-- CSS only -->
     <script src="https://unpkg.com/htmx.org@1.8.4"
         integrity="sha384-wg5Y/JwF7VxGk4zLsJEcAojRtlVp1FKKdGy1qN+OMtdq72WRvX/EdRdqg/LOhYeV" crossorigin="anonymous">
@@ -25,10 +24,15 @@
 <body>
 
     <div class="container">
-        <div class="item2">
+        <div class="nvbr">
             <a href="/">
-            <h4 class="directory" id="balancing">
-                Louis de Choulot</h4></a>
+                <h4 class="directory selected">
+                    <!-- house in white img from icons8 site-->
+                    <img src="/images/home.png" />
+
+
+                </h4>
+            </a>
             <!-- list -->
             <ul id="drpdwn">
                 <!-- add selected class if clicked -->
@@ -36,8 +40,8 @@
                     onclick="Select(this)">
                     <li class="html">Mes expériences</li>
                 </button>
-                <button id="whoami" class="selected" hx-get="/html-elms/whoami" hx-trigger="click"
-                    hx-target=".item4-container" onclick="Select(this)">
+                <button id="whoami" hx-get="/html-elms/whoami" hx-trigger="click" hx-target=".item4-container"
+                    onclick="Select(this)">
                     <li class="html">Qui suis-je ?</li>
                 </button>
                 <button id="projects" hx-get="/html-elms/projects" hx-trigger="click" hx-target=".item4-container"
@@ -45,61 +49,63 @@
                     <li class="html">Mes projets</li>
                 </button>
             </ul>
-        </div>
-        <div class="item3">
 
-            <div class="file-title html selected-inverse" hx-get="/html-elms/whoami" hx-trigger="click"
-                hx-target=".item4-container" onclick="Select(this)">
-                Qui suis-je ?<div class="file-title-af"
-                    onclick="Select(document.getElementById('whoami')); this.parentElement.remove()"></div>
+            <a class="contact" id="balancing" href="mailto:louisdechoulot@gmail.com">
+                <!-- white @ img from external src -->
+                contactez-moi
+            </a>
+        </div>
+        <div class="main-content">
+            <div class="sm-nvbr">
+
+                <div class="file-title html selected-inverse" hx-get="/html-elms/whoami" hx-trigger="click"
+                    hx-target=".item4-container" onclick="Select(this)">
+                    Qui suis-je ?<div class="file-title-af"
+                        onclick="Select(document.getElementById('whoami')); this.parentElement.remove()"></div>
+                </div>
             </div>
-        </div>
-        <div class="item1" id="item1">
+            <div class="item1" id="item1">
 
-            <div class="code-container">
-                <div class="spe-item4" id="spe-item4"></div>
-                <div class="item4" id="item4" style="text-align: justify;
+                <div class="code-container">
+                    <div class="spe-item4" id="spe-item4"></div>
+                    <div class="item4" id="item4" style="text-align: justify;
                 ">
-                    <div class="item4-container" id="item4-container">
-                        <p hx-get="/html-elms/whoami" hx-trigger="load" hx-target=".item4-container">Qui suis-je ?</p>
+                        <div class="item4-container" id="item4-container">
+                            <p hx-get="/html-elms/whoami" hx-trigger="load" hx-target=".item4-container">Qui suis-je ?
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- centered round button  -->
-            <div class="round-button" onclick="DropDown(this, document.getElementById('presentation'))">
-            </div>
-            <div id="presentation" class="presentation">
-                <div>
-                    <img class="pp" src="https://avatars.githubusercontent.com/u/71769482?v=4">
-                </div>
-                <h1>Louis de Lavenne de Choulot</h1>
-                <p>software / app / backend développeur
-                </p>
-                <div class="contact">
-                    <!-- logo small car  -->
-                    <a>
-                    <img src="https://img.icons8.com/ios-filled/50/000000/car.png">Permis B</a><br>
-                    <!-- inline tel and mail -->
-                    <a href="tel:+337 81 86 32 36">
-                        <img src="https://img.icons8.com/ios-filled/50/000000/phone.png">07 81 86 32 36
-                    </a>
-                    <a href="mailto:louisdechoulot@gmail.com">
-                        <img src="https://img.icons8.com/ios-filled/50/000000/email.png">louisdechoulot@gmail.com
-                    </a>
-                </div>
-                <div class="socials">
-                    <!-- add github logo with link to gthb and lkdn logo  -->
-                    <a href="https://github.com/Louis-de-Lavenne-de-Choulot">
-                        <!-- github img without background -->
-                        <img class="social"
-                            src="/images/github.svg"
-                            style="width: 70px;">
-                    </a>
-                    <a href="https://fr.linkedin.com/in/louis-de-lavenne-de-choulot-b911191b8">
-                        <img class="social" src="https://cdn.worldvectorlogo.com/logos/linkedin-icon.svg"
-                        style="width: 60px;">
-                    </a>
+                <div id="presentation" class="presentation">
+                    <div>
+                        <img class="pp" src="https://avatars.githubusercontent.com/u/71769482?v=4">
+                    </div>
+                    <h1>Louis de Lavenne de Choulot</h1>
+                    <p>software / app / backend développeur
+                    </p>
+                    <div class="contact">
+                        <!-- logo small car  -->
+                        <a>
+                            <img src="https://img.icons8.com/ios-filled/50/000000/car.png">Permis B</a><br>
+                        <!-- inline tel and mail -->
+                        <a href="tel:+337 81 86 32 36">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/phone.png">07 81 86 32 36
+                        </a>
+                        <a href="mailto:louisdechoulot@gmail.com">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/email.png">louisdechoulot@gmail.com
+                        </a>
+                    </div>
+                    <div class="socials">
+                        <!-- add github logo with link to gthb and lkdn logo  -->
+                        <a href="https://github.com/Louis-de-Lavenne-de-Choulot">
+                            <!-- github img without background -->
+                            <img class="social invert" src="/images/github.svg" style="width: 70px;">
+                        </a>
+                        <a href="https://fr.linkedin.com/in/louis-de-lavenne-de-choulot-b911191b8">
+                            <img class="social" src="https://cdn.worldvectorlogo.com/logos/linkedin-icon.svg"
+                                style="width: 60px;">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
