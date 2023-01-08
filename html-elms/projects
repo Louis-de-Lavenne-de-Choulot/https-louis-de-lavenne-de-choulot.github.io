@@ -23,7 +23,7 @@
             <a target="_blank" href="https://github.com/ClementCaton/ALGOSUP_2022_Project_3_A">
                 <h4>Synthetiseur de son - F#</h4>
                 <p>Le but de ce projet de 6 semaines était de créer un synthétiseur de son en F#. J'y ai assumé le
-                    rôle de développeur. Le son sur vôtre gauche a été fait
+                    rôle de développeur. Le son sur votre gauche a été fait
                     avec ce synthétiseur. Le nombre de vues du nugget package est de 1.5K à ce jour.</p>
             </a>
         </li>
@@ -52,6 +52,7 @@
         </li>
         <h1>Personnels</h1>
         <li>
+
             <div class="slide-container">
                 <a class="prev" onclick="plusSlides(1)">&#10094;</a>
                 <div class="cs custom-slider1 show fade">
@@ -104,7 +105,14 @@
                     proche du nôtre. L'intérieur des brèches est entièrement procédural avec un biome et des créatures
                     en fonction de celui-ci.</p>
             </a>
-            </a>
+        </li>
+        <li>
+            <img src="/images/projects/vpn.png" alt="image">
+            <!-- interactive pdf from /images/projects/Prog.pdf -->
+            <a target="_blank" href="/images/projects/Prog.pdf">
+                <h4>Article VPN dans le journal Programmez</h4>
+            <p>J'ai écris un article sur les VPN et leurs protocoles pour le journal Programmez (page 80). Ce projet a commencé en 2021 pendant ma deuxième année d'étude et c'est fini à la fin de celle-ci.</p>
+            </p>
         </li>
         <br>
     </ul>
