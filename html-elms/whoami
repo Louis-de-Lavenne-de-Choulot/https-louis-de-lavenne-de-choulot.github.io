@@ -12,10 +12,8 @@
         J'aime découvrir, apprendre et travailler dur pour arriver aux résultats demandés.
 
     </p>
-    <p><br>En 3 mots je me considère comme :  <span
-            style="color:rgb(249, 211, 44);">Passionné</span> - <span
-            style="color:rgb(249, 211, 44);">Dynamique</span> - <span
-            style="color:rgb(249, 211, 44);">Développeur</span> avant tout
+    <p><br>En 3 mots je me considère comme :  <span class="imp">Passionné</span> - <span class="imp">Dynamique</span> - <span
+        class="imp">Développeur</span> avant tout
     </p>
     <br>
     <h1>Mes Compétences</h1>
@@ -26,9 +24,9 @@
     <br>
     <h1>Langues</h1>
     <p>
-    Anglais : <span style="color:rgb(249, 211, 44);">C1</span>
+    Anglais : <span class="imp">C1</span>
     <br>
-    Allemand : <span style="color:rgb(249, 211, 44);">A2</span>
+    Allemand : <span class="imp">A2</span>
     </p>
     <br>
     <h1>Loisirs</h1>

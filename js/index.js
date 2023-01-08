@@ -102,6 +102,7 @@ function Definition(name) {
 // wait for page load
 window.onload = function () {
     scrollnbrs = document.getElementById("spe-item4");
+    scroll4 = document.getElementById("item4");
     
     // if links has ? then get the value after ? and select elm with id of it
     if (window.location.search) {
@@ -116,6 +117,11 @@ window.onload = function () {
     document.getElementById('item4').addEventListener("scroll", function () {
         // assign offsetTop of elm with class "item4" to elm with class "spe-item4"
         scrollnbrs.scrollTop = this.scrollTop;
+    });
+    // event listener on class "item4" and on scroll event
+    document.getElementById('spe-item4').addEventListener("scroll", function () {
+        // assign offsetTop of elm with class "item4" to elm with class "spe-item4"
+        scroll4.scrollTop = scrollnbrs.scrollTop;
     });
 
     // event listener on class "item4" and mutation observer
@@ -139,6 +145,11 @@ function resized() {
     scrollnbrs.innerHTML = "";
     while (inc < nbr) {
         inc++;
+        // if on page with "?whoami-a" or "?experience-a"
+        if (window.location.search == "?whoami-a" || window.location.search == "?experience-a") {
         scrollnbrs.innerHTML += "<p>" + inc + ".</p>";
+        } else {
+            scrollnbrs.innerHTML += "<p>.</p>";
+        }
     }
 }
