@@ -2,91 +2,95 @@
     <ul class="skills-list">
         <h1>Professionnels / Scolaires</h1>
         <li>
-                <img src="https://cdn.discordapp.com/attachments/970831716694491196/993521962095755285/Screenshot_2022-07-04_at_16.20.47.png"
-                    alt="image">
+            <img src="https://cdn.discordapp.com/attachments/970831716694491196/993521962095755285/Screenshot_2022-07-04_at_16.20.47.png"
+                alt="image">
 
             <a target="_blank" href="https://github.com/Louis-de-Lavenne-de-Choulot/ALGOSUP_2022_Project_4_F">
-                    <h4>
-                        Simulation VR - Unity C#
-                        || </h4>
-                    <p>
-                        Le but de ce projet de 6 semaines était la simulation de la vie scolaire dans les locaux en
-                        construction de l'école. J'y ai assumé les rôles de manager et de développeur. Nous avions
-                        implementé un multijoueur trouvable dans les branches
-                        secondaire. Notre groupe fût choisit pour continuer le projet à des fins promotionnelles.</p>
-                </a>
+                <h4>
+                    Simulation VR - Unity C#</h4>
+                <p>
+                    Le but de ce projet de 6 semaines était de créer une simulation de la vie scolaire dans les locaux en
+                    construction de l'école ALGOSUP. J'y ai assumé les rôles de manager et de développeur. Nous avons
+                    implementé un multijoueur trouvable dans les branches
+                    secondaires. Notre groupe a été choisi pour continuer le projet à des fins promotionnelles.</p>
+            </a>
         </li>
         <li>
-                <!-- add sound file ./images/nvr_gna_gveyp.wav -->
-                <audio controls>
-                    <source src="./images/projects/nvr_gna_gveyp.wav" type="audio/wav">
-                </audio>
-                <a target="_blank" href="https://github.com/ClementCaton/ALGOSUP_2022_Project_3_A">
-                    <h4>Synthetiseur de son - F#</h4>
-                    <p>Le but de ce projet de 6 semaines était de créer un synthétiseur de son en F#. J'y ai assumé le
-                        rôle de développeur. Le son à gauche a été fait
-                        avec. Le nombre de vues du nugget package est de 1.5K à ce jour.</p>
-                </a>
+            <!-- add sound file ./images/nvr_gna_gveyp.wav -->
+            <audio controls>
+                <source src="./images/projects/nvr_gna_gveyp.wav" type="audio/wav">
+            </audio>
+            <a target="_blank" href="https://github.com/ClementCaton/ALGOSUP_2022_Project_3_A">
+                <h4>Synthetiseur de son - F#</h4>
+                <p>Le but de ce projet de 6 semaines était de créer un synthétiseur de son en F#. J'y ai assumé le
+                    rôle de développeur. Le son sur vôtre gauche a été fait
+                    avec ce synthétiseur. Le nombre de vues du nugget package est de 1.5K à ce jour.</p>
+            </a>
         </li>
         <li>
-            <a target="_blank" href="https://www.nuget.org/packages/ALGOSUP_2022_Project_3_A/" class="secondary-link">le
+            <a target="_blank" href="https://www.nuget.org/packages/Synthesizer/" class="secondary-link">le
                 nugget package</a></li>
         <li>
-                <img src="/images/projects/1r1c.png" alt="image">
-                <a target="_blank" href="https://1rose1chou.com/">
-                    <h4>
-                        Site web - Wordpress / Divi</h4>
-                    <p>
-                        Le but de ce projet de 2 semaines était la création du site d'une experte puériculture pour
-                        hôtel de prestige. J'y ai assumé le rôle de développeur. Le site est en ligne et est géré par
-                        l'entreprise.</p>
-                </a>
+            <img src="/images/projects/1r1c.png" alt="image">
+            <a target="_blank" href="https://1rose1chou.com/">
+                <h4>
+                    Site web - Wordpress / Divi</h4>
+                <p>
+                    Le but de ce projet de 2 semaines était la création du site d'une experte en puériculture pour
+                    hôtel de prestige. J'y ai assumé le rôle de développeur. Le site est en ligne et est géré par
+                    notre entreprise.</p>
+            </a>
         </li>
         <li>
-                <img src="/images/projects/ewp.png" alt="image">
+            <img src="/images/projects/ewp.png" alt="image">
 
-                <a target="_blank" href="https://ewp.fr/">
-                    <h4>
-                        Site web de l'entreprise - Wordpress / Divi -> développeur, textes & design</h4>
-                    <p>Le but de ce projet de 2 mois était la création du site web de Euro Web Partners. J'y ai assumé
-                        les rôles de Seul développeur, créateur de textes & designer.</p>
+            <a target="_blank" href="https://ewp.fr/">
+                <h4>
+                    Site web de l'entreprise - Wordpress / Divi</h4>
+                <p>Le but de ce projet de 2 mois était la création du site web de Euro Web Partners. J'y ai été l'unique développeur, un créateur de textes & designer.</p>
             </a>
         </li>
         <h1>Personnels</h1>
         <li>
-                <div class="slide-container">
-                    <a class="prev" onclick="plusSlides(1)">&#10094;</a>
-                    <div class="cs custom-slider1 show fade">
-                        <img class="slide-img" src="/images/projects/app-solu-home.png">
-                    </div>
-                    <div class="cs custom-slider1 fade">
-                        <img class="slide-img" src="/images/projects/app-solu.png">
-                    </div>
-                    <div class="cs custom-slider1 fade">
-                        <img class="slide-img" src="/images/projects/app-solu-schedule.png">
-                    </div>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="slide-container">
+                <a class="prev" onclick="plusSlides(1)">&#10094;</a>
+                <div class="cs custom-slider1 show fade">
+                    <img class="slide-img" src="/images/projects/app-solu-home.png">
                 </div>
+                <div class="cs custom-slider1 fade">
+                    <img class="slide-img" src="/images/projects/app-solu.png">
+                </div>
+                <div class="cs custom-slider1 fade">
+                    <img class="slide-img" src="/images/projects/app-solu-schedule.png">
+                </div>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
 
-                <a target="_blank" href="https://bestiaever.ml">
+            <a target="_blank" href="https://bestiaever.ml">
                 <h4>Seveur sécurisé - Go compilé</h4>
-                <p>Le but de ce projet continue est la création d'un serveur sécurisé en Go compilé aussi sécurisé que possible. J'y assume tout les rôles. Le serveur est en ligne et permet d'accèder à une interface pour lalecture d'informations envoyées depuis le réseau radio LoraWan via The Things Network et à un outil de scheduling (en développement). Un but secondaire est de n'avoir aucun autre mdp à rentrer sur le site.</p>
-                </a>
+                <p>Le but de ce projet continu est la création d'un serveur en Go compilé aussi sécurisé que
+                    possible. J'y assume tous les rôles. Le serveur est en ligne et permet d'accéder à une interface
+                    pour la lecture d'informations envoyées depuis le réseau radio LoraWan via The Things Network et à un
+                    outil de scheduling (en développement). Un but secondaire est de n'avoir aucun mot de passe à rentrer
+                    sur le site après connexion avec github.</p>
+            </a>
             </a>
             <br>
         </li>
         <li>
-        <a target="_blank" href="https://github.com/Louis-de-Lavenne-de-Choulot/Go-server"
-            class="secondary-link">code
-            source</a>
+            <a target="_blank" href="https://github.com/Louis-de-Lavenne-de-Choulot/Go-server"
+                class="secondary-link">code
+                source</a>
         </li>
         <li>
             <img src="/images/projects/pia.png" alt="image">
             <a target="_blank" href="https://github.com/Louis-de-Lavenne-de-Choulot/Personal-AI">
                 <h4>Personal AI (essai de
-                reproduction
-                d'Alexa) - Go</h4>
-                <p>Le but de ce projet continue est la création d'une IA personnelle en Go. J'y assume tout les rôles. Le projet est en cours de développement. Pour le moment sont supportés spotify (en partie), les questions et les calculs. </p>
+                    reproduction
+                    d'Alexa) - Go</h4>
+                <p>Le but de ce projet continu est la création d'une IA personnelle en Go. J'y assume tous les rôles.
+                    Le projet est en cours de développement. Pour le moment sont supportés spotify (en partie), les
+                    questions et les calculs. </p>
             </a>
         </li>
         <li>
@@ -96,7 +100,9 @@
             <a target="_blank" href="https://github.com/BrendonDesvaux/Limitless">
                 <h4>Limitless - C#</h4>
                 <p>Jeu RPG VR (voir la branche
-                    Limitless-v0.0.1 pour le code).<br>Jeu basé sur des brèches dimensionnelles s'ouvrant dans un monde proche du nôtre. L'intérieur des brèches est entièrement procédural avec un biome et des créatures en fonctions de celui-ci.</p>
+                    Limitless-v0.0.1 pour le code).<br>Jeu basé sur des brèches dimensionnelles s'ouvrant dans un monde
+                    proche du nôtre. L'intérieur des brèches est entièrement procédural avec un biome et des créatures
+                    en fonction de celui-ci.</p>
             </a>
             </a>
         </li>

@@ -87,11 +87,17 @@ a {
 }
 
 .presentation {
+
+    height: -moz-available;
+    /* WebKit-based browsers will ignore this. */
+    height: -webkit-fill-available;
+    /* Mozilla-based browsers will ignore this. */
+    height: fill-available;
     padding: 4vh;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     opacity: 1;
-    align-items: center;
     /* rounded border with color and shades */
     --angle: 0deg;
     border: 36px solid;
@@ -373,9 +379,12 @@ a {
 } */
 
 
-.def, .imp{
-    color: #33acdf;
+.def{
     cursor: help;
+}
+
+.def, .imp {
+    color: #33acdf;
 }
 
 .highlight {
@@ -410,6 +419,7 @@ a {
 @media screen and (max-width: 950px) {
     .skills-list li{
         flex-direction: column;
+        align-items: inherit !important;
     }
     body .skills-list a{
         padding-left: 0;
@@ -426,6 +436,7 @@ body .skills-list {
 .skills-list li {
     padding: 2%;
     display: flex;
+    align-items: center;
 }
 
 .skills-list li:hover {

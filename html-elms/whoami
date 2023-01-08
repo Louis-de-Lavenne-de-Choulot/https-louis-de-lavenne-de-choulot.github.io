@@ -1,19 +1,19 @@
 <span>
-<h1>Je suis:</h1>
+<h1>Je suis</h1>
     <p>
-        - Manageur, développeur web et administateur serveur chez <span class="def" onclick="Definition('ewp')">Euro Web
-            Partners</span>
-        <br>
         - Étudiant en 3ème année d'étude à <span class="def" onclick="Definition('algosup')">ALGOSUP</span>.
         <br>
+        - Manageur, développeur web et administateur serveur chez <span class="def" onclick="Definition('ewp')">Euro Web
+            Partners.</span>
         <br>
-        Je suis passionné par l'informatique et la science (génétique).
+        <br>
+        Je suis passionné par l'informatique et la science (plus particulièrement la Génétique).
         <br>
         J'aime découvrir, apprendre et travailler dur pour arriver aux résultats demandés.
 
     </p>
-    <p><br>En 3 mots je me considère comme :  <span class="imp">Passionné</span> - <span class="imp">Dynamique</span> - <span
-        class="imp">Développeur</span> avant tout
+    <p><br>En 3 mots, je me considère :  <span class="imp">Passionné</span> - <span class="imp">Dynamique</span> - <span
+        class="imp">Développeur</span> avant tout.
     </p>
     <br>
     <h1>Mes Compétences</h1>
@@ -31,21 +31,22 @@
     <br>
     <h1>Loisirs</h1>
     <p>
-    Développement d'application, de jeux vidéos et tests de nouvelles technologies.
+    Développement d'applications, de jeux vidéos et tests de nouvelles technologies.
     <br>
-    Écouter de la Musique 
+    Écouter de la musique.
     <br>
-    Sciences (génétique en particulier)
+    Sciences (Génétique en particulier).
     <br>
-    Actualités Internationales
+    Actualités internationales.
     </p>
 </span>
 <span class="definition">
     <p id="ewp">Euro Web Partners est votre partenaire du quotidien dans le support de vos services informatiques, la
-        création de votre image sur le web (site, signature éléctronique, campagnes emailing & sms), votre gardien
+        création de votre image sur le web (site, signature électronique, campagnes emailing & sms), votre gardien
         contre les attaques digitales ainsi que le fournisseur de votre matériel informatique et de vos logiciels. Nous
-        prenons soin de choisir les outils les plus performants pour vos tâches et de nous assurer leur fonctionnement continu.</p>
+        prenons soin de choisir les outils les plus performants pour vos tâches et de nous assurer de leur fonctionnement continu.</p>
     <p id="algosup">ALGOSUP est une école/startup française du centre de la France. On y étudie les softskills
         nécessaires au management en entreprise et le coding à travers le medium de projets donnés par des entreprises.
     </p>
+    <br><br><br><br>
 </span>
