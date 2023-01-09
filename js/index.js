@@ -6,7 +6,8 @@ function Select(elm) {
 
     //search and remove class "selected" from an elm
     var selected = document.querySelector(".selected");
-    selected.classList.remove("selected");
+    if (selected != undefined)
+        selected.classList.remove("selected");
     //add class "selected" to elm
     elm.classList.add("selected");
     // verify in for each elm in .sm-nvbr if innerText of elm exists
@@ -27,13 +28,13 @@ function Select(elm) {
         newElm.innerText = elm.innerText;
         newElm.classList.add("file-title");
         newElm.classList.add("html");
-        newElm.setAttribute("onclick", "Select(this); DynamicLoading('"+elm.getAttribute("hx-get")+"');");
+        newElm.setAttribute("onclick", "Select(this); DynamicLoading('" + elm.getAttribute("hx-get") + "');");
         newElm.setAttribute("hx-get", elm.getAttribute("hx-get"));
         // create div in newElm
         let newElm2 = document.createElement("div");
         newElm2.classList.add("file-title-af");
         // select whoami then remove parent
-        newElm2.setAttribute("onclick", "Select(document.getElementById('whoami')); this.parentElement.remove()");
+        newElm2.setAttribute("onclick", "Removing(this.parentElement);");
         newElm.appendChild(newElm2);
         document.querySelector(".sm-nvbr").appendChild(newElm);
         exist = newElm;
@@ -51,7 +52,7 @@ function Select(elm) {
         DropDown(presentation);
     }
     // add  ? to url with hx get trimmed of "/html-elms/"
-    window.history.pushState("", "", "?"+elm.getAttribute("hx-get").substring(11, elm.getAttribute("hx-get").length)+"-a");
+    window.history.pushState("", "", "?" + elm.getAttribute("hx-get").substring(11, elm.getAttribute("hx-get").length) + "-a");
 }
 
 function DynamicLoading(pageName) {
@@ -63,6 +64,37 @@ function DynamicLoading(pageName) {
         document.getElementById('item4-container').innerHTML = this.responseText;
     };
     xhr.send();
+}
+
+function Removing(elm) {
+    // stop propagation
+    window.event.stopPropagation();
+    // if elm has class "selected-inverse"
+    if (elm.classList.contains("selected-inverse")) {
+        // search for children of sm-nvbsr if more than 1 return to /
+        if (document.querySelector(".sm-nvbr").children.length <= 1) {
+            // load index.html
+            window.location.href = "/";
+        } else {
+            // take the a child which does not have the same hx-get as elm
+            for (let i = 0; i < document.querySelector(".sm-nvbr").children.length; i++) {
+                let hx = document.querySelector(".sm-nvbr").children[i];
+                if (hx.getAttribute("hx-get") != elm.getAttribute("hx-get")) {
+                    // select the child and add class selected-inverse
+                    hx.classList.add("selected-inverse");
+                    // select the child and add class selected
+                    hx.classList.add("selected");
+                    // add  ? to url with hx get trimmed of "/html-elms/"
+                    window.history.pushState("", "", "?" + hx.getAttribute("hx-get").substring(11, hx.getAttribute("hx-get").length) + "-a");
+                    // click on the hx
+                    hx.click();
+
+                    break;
+                }
+            }
+        }
+    }
+    elm.remove();
 }
 
 function DropDown(elm2) {
@@ -103,7 +135,7 @@ function Definition(name) {
 window.onload = function () {
     scrollnbrs = document.getElementById("spe-item4");
     scroll4 = document.getElementById("item4");
-    
+
     // if links has ? then get the value after ? and select elm with id of it
     if (window.location.search) {
         let hash = window.location.search.substring(1, window.location.search.length - 2);
@@ -147,7 +179,7 @@ function resized() {
         inc++;
         // if on page with "?whoami-a" or "?experience-a"
         if (window.location.search == "?whoami-a" || window.location.search == "?experience-a") {
-        scrollnbrs.innerHTML += "<p>" + inc + ".</p>";
+            scrollnbrs.innerHTML += "<p>" + inc + ".</p>";
         } else {
             scrollnbrs.innerHTML += "<p>.</p>";
         }
