@@ -18,7 +18,7 @@
         <li>
             <!-- add sound file ./images/nvr_gna_gveyp.wav -->
             <audio controls>
-                <source src="./images/projects/nvr_gna_gveyp.wav" type="audio/wav">
+                <source src="./images/projects/nvr_gna_gveyp.mp4" type="audio/wav">
             </audio>
             <a target="_blank" href="https://github.com/ClementCaton/ALGOSUP_2022_Project_3_A">
                 <h4>Synthetiseur de son - F#</h4>
