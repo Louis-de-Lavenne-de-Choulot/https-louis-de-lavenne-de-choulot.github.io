@@ -68,7 +68,7 @@
             </div>
 
             <a target="_blank" href="https://bestiaever.ml">
-                <h4>Seveur sécurisé - Go compilé</h4>
+                <h4>Serveur sécurisé - Go compilé</h4>
                 <p>Le but de ce projet continu est la création d'un serveur en Go compilé aussi sécurisé que
                     possible. J'y assume tous les rôles. Le serveur est en ligne et permet d'accéder à une interface
                     pour la lecture d'informations envoyées depuis le réseau radio LoraWan via The Things Network et à un
