@@ -3,6 +3,10 @@ html {
     /* font-family: 'Tangerine'; */
 }
 
+*::-webkit-scrollbar {
+    width: 0;
+}
+
 body {
     position: absolute;
     top: 0;
@@ -29,7 +33,7 @@ a {
     position: fixed;
 }
 
-.main-content{
+.main-content {
     margin-left: 24%;
     height: 100%;
 }
@@ -57,7 +61,7 @@ a {
 }
 
 .item4 {
-    background-color: rgba(52,53,65);
+    background-color: rgba(52, 53, 65);
     width: 100%;
     overflow: auto;
 }
@@ -87,7 +91,10 @@ a {
 }
 
 .presentation {
-
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/images/background.svg);
+    background-position: center;
     height: -moz-available;
     /* WebKit-based browsers will ignore this. */
     height: -webkit-fill-available;
@@ -124,7 +131,7 @@ a {
 
 .pp {
     border-radius: 50%;
-    width: 22%;
+    width: 22vh;
 }
 
 .presentation h1 {
@@ -136,7 +143,7 @@ a {
     margin-top: 0;
 }
 
-.nvbr .contact{
+.nvbr .contact {
     color: #1177cf;
     position: absolute;
 }
@@ -175,7 +182,7 @@ a {
 .item1 h1 {
     align-self: center;
     font-size: 26px;
-    color: rgb(134 125 244);
+    color: rgb(92 82 213);
 }
 
 
@@ -183,6 +190,13 @@ a {
 /* remove ul style and indentation */
 .nvbr ul {
     list-style-type: none;
+    padding: 1%;
+}
+
+.box-dr {
+    height: 83%;
+    background-color: #1e1e20;
+    border: solid #1c1c1e;
     padding: 1%;
 }
 
@@ -217,10 +231,11 @@ a {
 
 /* if width 875 */
 @media screen and (max-width: 875px) {
-    .html{
+    .html {
         font-size: inherit;
     }
-    #balancing{
+
+    #balancing {
         font-size: small;
     }
 }
@@ -240,7 +255,7 @@ a {
 }
 
 .selected-inverse {
-    background-color: rgba(52,53,65) !important;
+    background-color: rgba(52, 53, 65) !important;
 }
 
 .file-title {
@@ -282,20 +297,24 @@ a {
         font-size: larger;
     }
 
-    .container{
+    .container {
         display: flex;
         flex-direction: column;
     }
 
     /* remove all nvbr properties */
     .nvbr {
-    padding:inherit;
-    height: auto;
-    width: auto;
-    width: -webkit-fill-available;
-    width: -moz-available;
-    width: fill-available;
-    position: inherit;
+        padding: inherit;
+        height: auto;
+        width: auto;
+        width: -webkit-fill-available;
+        width: -moz-available;
+        width: fill-available;
+        position: inherit;
+    }
+
+    .box-dr{
+        height: auto;
     }
 
     #balancing {
@@ -304,7 +323,7 @@ a {
         color: #00000000;
     }
 
-    .main-content{
+    .main-content {
         margin-left: 0;
     }
 
@@ -344,8 +363,6 @@ a {
 
     .pp {
         padding-top: 1vh;
-        width: 75px;
-        height: 75px;
     }
 
 }
@@ -356,11 +373,9 @@ a {
     margin-top: 0;
 }
 
-.spe-item4, .item4 {
+.spe-item4,
+.item4 {
     padding-top: 1%;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    overflow-y: scroll;
 }
 
 .spe-item4::-webkit-scrollbar {
@@ -379,11 +394,12 @@ a {
 } */
 
 
-.def{
+.def {
     cursor: help;
 }
 
-.def, .imp {
+.def,
+.imp {
     color: #33acdf;
 }
 
@@ -391,7 +407,7 @@ a {
     font-weight: bold;
 }
 
-.item4 *{
+.item4 * {
     margin-bottom: 0;
     margin-top: 0;
 }
@@ -417,14 +433,16 @@ a {
 }
 
 @media screen and (max-width: 950px) {
-    .skills-list li{
+    .skills-list li {
         flex-direction: column;
         align-items: inherit !important;
     }
-    body .skills-list a{
+
+    body .skills-list a {
         padding-left: 0;
     }
-    body .skills-list img{
+
+    body .skills-list img {
         width: 80%;
     }
 }
@@ -485,9 +503,9 @@ body .skills-list {
     color: #b8adad;
 }
 
-.code-container::-webkit-scrollbar-thumb{
+.code-container::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(122,153,217)), color-stop(0.72, rgb(73,125,189)), color-stop(0.86, rgb(28,58,148)));
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(122, 153, 217)), color-stop(0.72, rgb(73, 125, 189)), color-stop(0.86, rgb(28, 58, 148)));
 }
 
 .code-container::-webkit-scrollbar-track {
@@ -500,4 +518,3 @@ body .skills-list {
     width: 12px;
     background-color: #F5F5F5;
 }
-
