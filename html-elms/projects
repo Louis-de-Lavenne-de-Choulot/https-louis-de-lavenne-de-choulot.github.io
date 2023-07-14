@@ -90,7 +90,7 @@
                     reproduction
                     d'Alexa) - Go</h4>
                 <p>Le but de ce projet continu est la création d'une IA personnelle en Go. J'y assume tous les rôles.
-                    Le projet est en cours de développement. Pour le moment sont supportés spotify (en partie), les
+                    Le projet est en cours de développement. Pour le moment sont supportés spotify (en parti), les
                     questions et les calculs. </p>
             </a>
         </li>
@@ -111,7 +111,7 @@
             <!-- interactive pdf from /images/projects/Prog.pdf -->
             <a target="_blank" href="/images/projects/Prog.pdf">
                 <h4>Article VPN dans le journal Programmez</h4>
-            <p>J'ai écris un article sur les VPN et leurs protocoles pour le journal Programmez (page 80). Ce projet a commencé en 2021 pendant ma deuxième année d'étude et c'est fini à la fin de celle-ci.</p>
+            <p>J'ai écris un article sur les VPN et leurs protocoles pour le journal Programmez (page 80). Ce projet a commencé en 2021 pendant ma deuxième année d'étude et s'est fini à la fin de celle-ci.</p>
             </p>
         </li>
         <br>
