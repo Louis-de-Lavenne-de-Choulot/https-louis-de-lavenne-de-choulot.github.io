@@ -109,7 +109,7 @@ a {
     --angle: 0deg;
     border: 36px solid;
     border-image: linear-gradient(var(--angle), #7ad4e8, #c1f9ce, #f5a4a9) 1;
-    animation: 8s rotate linear infinite;
+    animation: 8s brotate linear infinite;
 
 }
 
